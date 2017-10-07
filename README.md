@@ -15,14 +15,19 @@ Installation
 Usage
 -----
 
-In your settings.py files add the following config (all items are reqired,
-could be empty of course):
+In your `settings.py` files add the following config:
 
     I2P_ACCESSLIST = {
         "whitelist": ["choosenone1pgcujqsk22hpxgyq3t6gjnu4wcu6cqagtame2spoq"],
         "blacklist": ["bob6d4psz73qurfnzv2tivotzxx63nylwdvsxrywpemxqedzk4wa"],
         "regex": "bob",
     }
+
+All options are reqired, could be empty of course.
+
+* whitelist -- list of allowed destinations
+* blacklist -- list of blocked destinations
+* regex     -- destinations which are started with this string are allowed
 
 In your `views.py` you can now import and use decorator or mixin to restrict
 access to specific views:
